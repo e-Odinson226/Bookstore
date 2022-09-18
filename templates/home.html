@@ -1,15 +1,7 @@
 {% extends "_base.html" %}
-
+{% load static %}
 {% block title %}Home{% endblock title %}
-
 {% block content %}
-<h1>This is our home page.</h1>
-{% if user.is_authenticated %}
-<p>Hi {{ user.email }}!</p>
-<p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a>
-<a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
+<h1>Bar rooh pakesh salavat.</h1>
+<img class="bookcover" src="{% static 'images/20220915-PyreneesPark_ROW3570081755_UHD.jpg' %}">
 {% endblock content %}
